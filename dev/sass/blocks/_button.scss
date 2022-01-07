@@ -1,0 +1,43 @@
+%button
+{
+  min-width: max-content;
+  width: 150px;
+  padding: 1em;
+  border-radius: 1.5em;
+  border: solid 2px;
+
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1em;
+
+  cursor: pointer;
+}
+.button
+{
+  &--primary_solid
+  {
+    @extend %button;
+    background-color: $btn-primary-bg;
+    color: $btn-primary-color;
+    border-color: #fff;
+  }
+  &--primary_gradient
+  {
+    @extend %button;
+    background-color: $btn-primary-bg;
+    color: $btn-primary-color;
+    border-color: #fff;
+  }
+  &--secondary
+  {
+    @extend %button;
+    background-color: transparent;
+    color: $btn-secondary-color;
+  }
+  &--tertiary
+  {
+    @extend %button;
+    background-color: transparent;
+    border: none;
+  }
+}
