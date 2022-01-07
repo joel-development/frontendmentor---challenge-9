@@ -1,5 +1,6 @@
 %button
 {
+  display: inline-block;
   min-width: max-content;
   width: 150px;
   padding: 1em;
@@ -8,6 +9,7 @@
 
   font-weight: 700;
   text-decoration: none;
+  text-align: center;
   line-height: 1em;
 
   cursor: pointer;
@@ -24,9 +26,9 @@
   &--primary_gradient
   {
     @extend %button;
-    background-color: $btn-primary-bg;
-    color: $btn-primary-color;
-    border-color: #fff;
+    background-image: linear-gradient(to right, $gradient-start-orange, $gradient-end-orange);
+    color: white;
+    border: none;
   }
   &--secondary
   {
@@ -37,7 +39,8 @@
   &--tertiary
   {
     @extend %button;
-    background-color: transparent;
-    border: none;
+    background-color: $btn-primary-bg;
+    color: $text-menu-inactive;
+    border-color: #fff;
   }
 }

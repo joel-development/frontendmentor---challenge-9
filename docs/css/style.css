@@ -347,7 +347,12 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 .button--tertiary, .button--secondary, .button--primary_gradient, .button--primary_solid {
+  display: inline-block;
   min-width: max-content;
   width: 150px;
   padding: 1em;
@@ -355,6 +360,7 @@ body {
   border: solid 2px;
   font-weight: 700;
   text-decoration: none;
+  text-align: center;
   line-height: 1em;
   cursor: pointer;
 }
@@ -365,17 +371,117 @@ body {
   border-color: #fff;
 }
 .button--primary_gradient {
-  background-color: #fff;
-  color: #ff525d;
-  border-color: #fff;
+  background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+  color: white;
+  border: none;
 }
 .button--secondary {
   background-color: transparent;
   color: #fff;
 }
 .button--tertiary {
-  background-color: transparent;
-  border: none;
+  background-color: #fff;
+  color: #1f3f5b;
+  border-color: #fff;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.nav-bar {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 100px;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 0 25px;
+}
+.nav-bar__toggle-icon {
+  cursor: pointer;
+}
+
+.menu,
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.menu__display {
+  text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  top: 100px;
+  right: 5%;
+  width: 90%;
+  height: max-content;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transform: translate(0, -750px);
+  transition: transform ease-in 0.5s;
+}
+.menu--on {
+  transform: translate(0, 0);
+}
+.menu__display {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #1f3f5b;
+  font-weight: 500;
+  line-height: 50px;
+  transition: color 0.2s ease-in;
+}
+.menu__display--active {
+  color: #4b5862;
+}
+.menu__display .arrow-icon {
+  display: inline-block;
+  height: 18px;
+  width: 16px;
+  background-image: url(../assets/images/icon-arrow-dark.svg);
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease-in;
+}
+.menu__display .arrow-icon--active {
+  transform: rotate(180deg);
+}
+.menu__buttons {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-menu {
+  background-color: #f0f0f0;
+  height: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+}
+.sub-menu--active {
+  height: max-content;
+  color: #4b5862;
+}
+.sub-menu__item {
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+}
+.sub-menu__link {
+  text-decoration: none;
+  color: #4b5862;
 }
 
 .cta {

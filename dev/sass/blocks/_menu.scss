@@ -1,0 +1,128 @@
+.header
+{
+  position: absolute;
+  width: 100%;
+}
+
+.nav-bar
+{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-rows: 100px;
+  align-items: center;
+  
+  width: 100%;
+  height: 100px;
+  padding: 0 25px;
+
+  &__toggle-icon
+  {
+    cursor: pointer;
+  }
+}
+
+.menu,
+.sub-menu
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.menu__display
+{
+  text-decoration: none;
+}
+
+.menu
+{
+  position: absolute;
+  top: 100px;
+  right: 5%;
+
+  width: 90%;
+  height: max-content;
+  padding: 20px;
+
+  border-radius: 5px;
+  background-color: $text-white;
+
+  transform: translate(0, -750px);
+  transition: transform ease-in .5s;
+  
+  &--on
+  {
+    transform: translate(0, 0);
+  }
+  &__display
+  {
+    display: inline-block;
+    width: 100%;
+
+    text-align: center;
+    color: $text-menu-inactive;
+    font-weight: 500;
+    line-height: 50px;
+    transition: color .2s ease-in;
+
+    &--active
+    {
+      color: $text-menu-active;
+    }
+
+    .arrow-icon
+    {
+      display: inline-block;
+      height: 18px;
+      width: 16px;
+      background-image: url(../assets/images/icon-arrow-dark.svg);
+      background-size: 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+      
+      transition: transform .2s ease-in;
+      &--active
+      {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__buttons
+  {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.sub-menu
+{
+  background-color: $bg-sub-menu;
+  height: 0;
+
+  border-radius: 5px;
+
+  overflow: hidden;
+  transition: height .5s ease-in;
+
+  &--active
+  {
+    height: max-content;
+    color: $text-menu-active;
+  }
+
+  &__item
+  {
+    line-height: 50px;
+    text-align: center;
+    font-weight: 500;
+  }
+  &__link
+  {
+    text-decoration: none;
+    color: $text-sub-menu;
+  }
+}
