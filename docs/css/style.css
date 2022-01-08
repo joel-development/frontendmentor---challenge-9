@@ -345,10 +345,19 @@ body {
   position: relative;
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
 }
 
 p {
   margin: 0;
+}
+
+.title {
+  font-family: "Overpass", sans-serif;
 }
 
 .button--tertiary, .button--secondary, .button--primary_gradient, .button--primary_solid {
@@ -507,7 +516,7 @@ p {
 }
 .cta__text {
   font-weight: 400;
-  line-height: 1.5em;
+  line-height: 28px;
   color: #c8c8cb;
 }
 .cta__buttons {
@@ -527,6 +536,55 @@ p {
 @media screen and (min-width: 860px) {
   .cta__title {
     font-size: 4em;
+  }
+}
+.future {
+  padding: 50px 20px;
+}
+.future__main-title {
+  text-align: center;
+  font-size: 32px;
+  color: #1f3f5b;
+}
+.future__img {
+  display: block;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.future__title {
+  color: #1f3f5b;
+  font-size: 24px;
+}
+.future__text {
+  text-align: center;
+}
+.future__wrapper {
+  margin-bottom: 75px;
+}
+.future__paragraph {
+  line-height: 28px;
+  color: #4b5862;
+}
+
+@media screen and (min-width: 860px) {
+  .future__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+  }
+  .future__img, .future__text {
+    order: 10;
+  }
+  .future__text {
+    padding: 75px;
+    text-align: left;
+    order: 5;
+  }
+  .future__img {
+    width: 100%;
   }
 }
 

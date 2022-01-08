@@ -7,8 +7,17 @@ body
   position: relative;
   font-size: 16px;
   font-family: $font-body;
+  overflow-x: hidden;
+}
+img
+{
+  max-width: 100%;
 }
 p
 {
   margin: 0;
+}
+.title
+{
+  font-family: $font-title;
 }
