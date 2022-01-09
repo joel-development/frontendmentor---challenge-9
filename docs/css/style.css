@@ -505,8 +505,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: max-content;
-  height: 100vh;
+  min-height: 100vh;
+  height: max-content;
   padding: 100px 20px 0 20px;
   border-radius: 0 0 0 100px;
   color: #ffffff;
@@ -547,7 +547,7 @@ p {
   }
 }
 .future {
-  padding: 50px 20px;
+  padding: 50px 0;
 }
 .future__main-title {
   text-align: center;
@@ -566,6 +566,7 @@ p {
 }
 .future__text {
   text-align: center;
+  padding: 25px;
 }
 .future__wrapper {
   margin-bottom: 75px;
@@ -583,16 +584,19 @@ p {
     grid-template-rows: 1fr;
     align-items: center;
   }
-  .future__img, .future__text {
-    order: 10;
-  }
   .future__text {
     padding: 75px;
     text-align: left;
-    order: 5;
   }
   .future__img {
     width: 100%;
+  }
+
+  .future :last-child picture, .future :last-child__text {
+    order: 10;
+  }
+  .future :last-child picture {
+    order: 5;
   }
 }
 .state {

@@ -67,7 +67,9 @@
             </li>
           </ul>
         </li>
-        <hr>
+        <li>
+          <hr>
+        </li>
         <li class="menu__buttons">
           <a href="#" class="button button--tertiary">Login</a>
           <a href="#" class="button button--primary_gradient">Sign Up</a>
@@ -87,14 +89,17 @@
         </p>
         <div class="cta__buttons">
           <a class="cta__button button--primary_solid">Start for Free</a>
-          <a href="#"class="cta__button button--secondary">Learn More</a>
+          <a href="#" class="cta__button button--secondary">Learn More</a>
         </div>
       </div>
     </div>
     <div class="future">
       <h2 class="future__main-title title">Designed for the future</h2>
       <div class="future__grid">
-        <img src="assets/images/illustration-editor-mobile.svg" alt="editor illustration" class="future__img">
+        <picture>
+          <source srcset="assets/images/illustration-editor-desktop.svg" media="(min-width: 860px)">
+          <img src="assets/images/illustration-editor-mobile.svg" alt="editor illustration" class="future__img">
+        </picture>
         <div class="future__text">
           <div class="future__wrapper">
             <h3 class="future__title title">
@@ -114,16 +119,40 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="state">
-      <img src="assets/images/illustration-phones.svg" alt="phones illustration" class="state__img">
-      <div class="state__text">
-        <h2 class="state__title">
-          State of the Art Infrastructure
-        </h2>
-        <p class="state__paragraph">
-          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-        </p>
+      <div class="state">
+        <img src="assets/images/illustration-phones.svg" alt="phones illustration" class="state__img">
+        <div class="state__text">
+          <h2 class="state__title">
+            State of the Art Infrastructure
+          </h2>
+          <p class="state__paragraph">
+            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+          </p>
+        </div>
+      </div>
+      <div class="future__grid">
+        <picture>
+          <source srcset="assets/images/illustration-laptop-desktop.svg" media="(min-width: 860px)">
+          <img src="assets/images/illustration-laptop-mobile.svg" alt="editor illustration"  class="future__img">
+        </picture>
+        <div class="future__text">
+          <div class="future__wrapper">
+            <h3 class="future__title title">
+              Introducing an extensible editor
+            </h3>
+            <p class="future__paragraph">
+              Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.
+            </p>
+          </div>
+          <div class="future__text-wrapper">
+            <h3 class="future__title title">
+              Robust content management
+            </h3>
+            <p class="future__paragraph">
+              Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </main>

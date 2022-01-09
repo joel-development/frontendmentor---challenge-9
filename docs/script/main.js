@@ -9,7 +9,11 @@ toggle.addEventListener('click', ()=>
 
 window.addEventListener('scroll',()=>
 {
-  if(window.scrollY > window.screen.availHeight - 200)
+  if(menu.classList.contains('menu--on'))
+  {
+    menu.classList.remove('menu--on')
+  }
+  if(window.scrollY > window.innerHeight - 100)
   {
     header.classList.add('header--scroll-bg')
   }

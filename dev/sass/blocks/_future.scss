@@ -1,6 +1,6 @@
 .future
 {
-  padding: 50px 20px;
+  padding: 50px 0;
   &__main-title
   {
     text-align: center;
@@ -22,6 +22,7 @@
   &__text
   {
     text-align: center;
+    padding: 25px;
   }
   &__wrapper
   {
@@ -45,20 +46,26 @@
     grid-template-rows: 1fr;
     align-items: center;
   }
-  &__img,
-  &__text
-  {
-    order: 10;
-  }
   &__text
   {
     padding: 75px;
     text-align: left;
-    order: 5;
   }
   &__img
   {
     width: 100%;
   }
-}  
+}
+.future :last-child
+{
+  & picture,
+  &__text
+  {
+    order: 10;
+  }
+  & picture
+  {
+    order: 5;
+  }
+}
 }
