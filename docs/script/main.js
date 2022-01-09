@@ -1,9 +1,22 @@
 const toggle = document.getElementById('toggle-menu')
 const menu = document.getElementById('menu')
+const header = document.getElementById('header')
 
 toggle.addEventListener('click', ()=>
 {
   menu.classList.toggle('menu--on')
+})
+
+window.addEventListener('scroll',()=>
+{
+  if(window.scrollY > window.screen.availHeight - 200)
+  {
+    header.classList.add('header--scroll-bg')
+  }
+  else
+  {
+    header.classList.remove('header--scroll-bg')
+  }
 })
 
 menu.addEventListener('click',(e)=>

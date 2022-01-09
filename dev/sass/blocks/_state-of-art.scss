@@ -1,0 +1,68 @@
+.state
+{
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+
+  margin: 150px 0 25px;
+
+  background-image: url(../assets/images/bg-pattern-circles.svg), linear-gradient(to bottom right, $gradient-start-purple, $gradient-end-purple);
+  background-size: 100%;
+  background-position: top center, center;
+  background-repeat: no-repeat;
+
+  border-radius: 0 100px;
+
+  &__img
+  {
+    position: relative;
+    top: -125px;
+  }
+  &__text
+  {
+    position: relative;
+    top: -125px;
+    padding: 25px;
+    text-align: center;
+  } 
+  &__title
+  {
+    color: $text-white;
+    font-family: $font-title;
+    font-size: 32px;
+  }
+  &__paragraph
+  {
+    line-height: 28px;
+    color: $text-footer;
+  }
+}
+
+@media screen and (min-width:860px){
+.state
+{
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  background-size: auto 100%, 100%;
+  background-position: left, center;
+  &__img
+  {
+    position: absolute;
+    top: -25%;
+    left: 0;
+    height: 150%;
+    max-width: 50%;
+  }
+  &__text
+  {
+    top: 0;
+    padding: 50px;
+    grid-column: 2/3;
+
+    text-align: left;
+  }
+}
+}
