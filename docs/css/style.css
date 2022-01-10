@@ -821,5 +821,17 @@ p {
     text-decoration: underline;
   }
 }
+.attribution .paragraph {
+  padding: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.attribution .paragraph .link {
+  color: #ff525d;
+  text-decoration: none;
+}
+.attribution .paragraph .link:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=style.css.map */

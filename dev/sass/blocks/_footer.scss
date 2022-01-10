@@ -19,7 +19,6 @@
 
 .menu-footer
 {
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -73,4 +72,24 @@
     }
   }
 }
+}
+
+.attribution
+{
+  .paragraph
+  {
+    padding: 24px;
+
+    line-height: 24px;
+    text-align: center;
+    .link
+    {
+      color: $btn-primary-color;
+      text-decoration: none;
+      &:hover
+      {
+        text-decoration: underline;
+      }
+    }
+  }
 }
