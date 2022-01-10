@@ -1,0 +1,72 @@
+.footer
+{
+  background-color: $bg-footer;
+  color: white;
+  border-radius: 0 100px 0 0;
+}
+
+.nav-footer
+{
+  padding: 25px;
+  .logo
+  {
+    display: block;
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.menu-footer
+{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+
+  text-align: center;
+  
+  &__section
+  {
+    width: 250px;
+    max-width: 100%;
+    padding: 16px;
+    margin: 0;
+    
+    ul
+    {
+      list-style: none;
+    }
+    &__title
+    {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__item
+    {
+      line-height: 24px;
+      a
+      {
+        color: $text-footer;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 860px) {
+.nav-footer
+{
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+.menu-footer
+{
+  text-align: left;
+  &__section
+  {
+    width: max-content;
+  }
+}
+}

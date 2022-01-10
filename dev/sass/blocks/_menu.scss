@@ -53,14 +53,16 @@
 
   width: 90%;
   height: max-content;
+  max-height: calc(90vh - 100px);
+  overflow-y: auto;
   padding: 20px;
 
   border-radius: 5px;
   background-color: $text-white;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
 
-  transform: translate(0, -750px);
-  transition: transform ease-in .5s;
+  transform: translate(0, -150vh);
+  transition: transform linear .5s;
   
   &--on
   {
