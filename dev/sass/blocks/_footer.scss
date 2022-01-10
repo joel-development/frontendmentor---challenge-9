@@ -67,6 +67,10 @@
   &__section
   {
     width: max-content;
+    &__item:hover
+    {
+      text-decoration: underline;
+    }
   }
 }
 }

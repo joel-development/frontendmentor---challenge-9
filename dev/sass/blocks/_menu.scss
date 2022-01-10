@@ -39,12 +39,6 @@
   margin: 0;
   font-size: 18px;
 }
-
-.menu__display
-{
-  text-decoration: none;
-}
-
 .menu
 {
   position: absolute;
@@ -118,7 +112,6 @@
   border-radius: 5px;
 
   overflow: hidden;
-  transition: height .5s ease-in;
 
   &--active
   {
@@ -137,4 +130,89 @@
     text-decoration: none;
     color: $text-sub-menu;
   }
+}
+
+@media screen and (min-width: 860px) {
+.nav-bar
+{
+  grid-template-columns: 200px 1fr;
+  justify-items: center;
+  padding: 0;
+  &__toggle-icon
+  {
+    display: none;
+  }
+  &__menu
+  {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    transform: translate(0);
+  }
+}
+.menu
+{
+  width: 100%;
+
+  box-shadow: none;
+  background-color: transparent;
+
+  overflow: visible;
+
+  .item-container
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  &__buttons
+  {
+    flex-direction: row;
+  }
+  &__display
+  {
+    margin-right: 25px;
+    color: $text-footer;
+    .arrow-icon
+    {
+      background-image: url(../assets/images/icon-arrow-light.svg);
+    }
+    &--active
+    {
+      color: $text-white;
+      text-decoration: underline;
+    }
+    &:hover
+    {
+      color: $text-white;
+    }
+  }
+  &__hr
+  {
+    display: none;
+  }
+  &__item
+  {
+    position: relative;
+  }
+}
+.sub-menu
+{
+  position: absolute;
+  top: 50px;
+
+  width: 100%;
+
+  background-color: white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  &__item a:hover
+  {
+    color: black;
+    font-weight: 700;
+    transition: color .2s ease-in;
+  }
+}
 }

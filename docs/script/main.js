@@ -42,6 +42,8 @@ menu.addEventListener('click',(e)=>
     e.target.classList.toggle('arrow-icon--active')
   }
 })
+
+// for tabindex
 menu.addEventListener('keypress',(e)=>
 {
   if(e.target.classList.contains('menu__display'))

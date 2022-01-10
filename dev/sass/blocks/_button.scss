@@ -5,7 +5,7 @@
   width: 150px;
   padding: 1em;
   border-radius: 1.5em;
-  border: solid 2px;
+  border: solid 2px black;
 
   font-weight: 700;
   text-decoration: none;
@@ -13,34 +13,90 @@
   line-height: 1em;
 
   cursor: pointer;
+  transition: .2s border-color  ease-in;
+  transition: .2s color ease-in;
+  transition: .2s background-color  ease-in;
 }
 .button
 {
-  &--primary_solid
+  &--primary
   {
-    @extend %button;
-    background-color: $btn-primary-bg;
-    color: $btn-primary-color;
-    border-color: #fff;
-  }
-  &--primary_gradient
-  {
-    @extend %button;
-    background-image: linear-gradient(to right, $gradient-start-orange, $gradient-end-orange);
-    color: white;
-    border: none;
+    &_solid
+    {
+      @extend %button;
+      background-color: $btn-primary-bg;
+      color: $btn-primary-color;
+      border-color: #fff;
+    }
+    &_gradient
+    {
+      @extend %button;
+      background-image: linear-gradient(to right, $gradient-start-orange, $gradient-end-orange);
+      color: white;
+      border: none;
+    }
   }
   &--secondary
   {
     @extend %button;
     background-color: transparent;
     color: $btn-secondary-color;
+    border-color: white
   }
   &--tertiary
   {
     @extend %button;
-    background-color: $btn-primary-bg;
-    color: $text-menu-inactive;
-    border-color: #fff;
+    color: $text-white;
+    border-color: transparent;
+
+    &.button--header
+    {
+      color: $title-color;
+    }
   }
+}
+
+@media screen and (min-width:860px) {
+.button
+{
+  &--primary
+  {
+    
+    &_gradient.button--header
+    {
+      background-color: #fff;
+      background-image: none;
+      color: $btn-primary-color; 
+    }
+    &_gradient.button--header:hover
+    {
+      background-color: rgba(255, 255, 255, 0.25);
+      color: white;
+    }
+    &_solid:hover
+    {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  &--secondary:hover
+  {
+    background-color: white;
+    color: $btn-primary-color;
+    border-color: white;
+  }
+  &--tertiary
+  {
+    background-color: transparent;
+    &.button--header
+    {
+      color: $text-white;
+      &:hover
+      {
+        color: $text-cta;
+      }
+    }
+  }
+}
 }
