@@ -22,21 +22,23 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshots/desktop.jpg)
 
 ### Links
 
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Solution URL: [Github](https://github.com/joel-development/frontendmentor---challenge-9)
+- Live Site URL: [Github Pages](https://joel-development.github.io/frontendmentor---challenge-9)
 
 ## Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass
 - Flexbox
 - CSS Grid
+- BEM Methodology
+- Javascript
 - Mobile-first workflow
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [joel-development](https://joel-development.github.io/)
