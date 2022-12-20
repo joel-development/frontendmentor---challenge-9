@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/joel-development/frontendmentor---challenge-9)
-- Live Site URL: [Github Pages](https://joel-development.github.io/frontendmentor---challenge-9)
+- Solution URL: [Github](https://github.com/sanchezdev-1906/frontendmentor---challenge-9)
+- Live Site URL: [Github Pages](https://sanchezdev-1906.github.io/frontendmentor---challenge-9)
 
 ## Built with
 
@@ -41,4 +41,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [joel-development](https://joel-development.github.io/)
+- Website - [joel-development](https://sanchezdev-1906.github.io/)
